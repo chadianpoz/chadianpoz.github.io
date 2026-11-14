@@ -7,7 +7,7 @@
   --accent-soft: #e2eaf2;
   --chip: #efebe1;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --mono: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --width: 760px;
 }
 @media (prefers-color-scheme: dark) {
