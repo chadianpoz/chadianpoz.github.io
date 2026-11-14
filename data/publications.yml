@@ -1,4 +1,4 @@
-# Fields: title, authors, venue, year, url, tags, blurb, role, selected (shown on home page), first (first author)
+# Fields: title, authors, venue, year, url, blurb, selected (shown on home page)
 
 journal:
   - title: "Diverse organic molecules on Mars revealed by the first SAM TMAH experiment"
@@ -13,9 +13,6 @@ journal:
       Curiosity rover's Sample Analysis at Mars (SAM) instrument. TMAH breaks large organic molecules into
       fragments that SAM can identify, and the experiment revealed a diverse set of organic molecules
       in Gale crater.
-    role: >-
-      As a member of the SAM team at NASA Goddard, I ran experimental iterations of the method on the
-      Earth testbed instrument to inform result interpretation and instrument methods.
 
   - title: "Free-living autotrophs drive a carbon fixation peak within the Orca Basin chemocline while heterotrophs dominate total activity from seawater to brine"
     authors: "ER Paris, RSR Salcedo, S Buessecker, C Pozarycki, M Desmarais, ..."
@@ -45,7 +42,6 @@ journal:
     url: "https://doi.org/10.1089/ast.2023.0122"
     tags: [Brines, Life detection]
     selected: true
-    first: true
     blurb: >-
       Salt evaporation ponds at South Bay Salt Works concentrate seawater step by step, which makes them a
       natural experiment for brines on Mars and the ocean worlds. Amino acids reached concentrations above
@@ -75,10 +71,6 @@ journal:
       Results from the Curiosity rover's search for organic molecules in the clay-rich Glen Torridon
       region of Gale crater, using SAM's wet chemistry (MTBSTFA derivatization) and pyrolysis experiments,
       supported by laboratory work on Mars-analog samples.
-    role: >-
-      I optimized the SAM wet chemistry experiment for Glen Torridon on the Earth testbed instrument.
-      Uplinks to the rover were modified because of results I obtained, and organics were identified in the
-      returned data with my analysis.
 
   - title: "The grayness of the origin of life"
     authors: "HH Smith, AS Hyde, DN Simkus, E Libby, SE Maurer, HV Graham, ..., CI Pozarycki, CH House, SS Johnson"

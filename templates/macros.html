@@ -4,11 +4,10 @@
 <li class="pub">
   <div class="pub-year">{{ p.year }}</div>
   <div class="pub-body">
-    <div class="pub-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.first %} <span class="badge">first author</span>{% endif %}</div>
+    <div class="pub-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</div>
     {% if p.authors %}<div class="pub-authors">{{ p.authors | bold_me | safe }}</div>{% endif %}
     <div class="pub-venue">{{ p.venue }}</div>
     {% if show_blurb and p.blurb %}<p class="pub-blurb">{{ p.blurb }}</p>{% endif %}
-    {% if show_blurb and p.role %}<p class="pub-role"><span>My part</span> {{ p.role }}</p>{% endif %}
   </div>
 </li>
 {% endmacro %}
@@ -28,6 +27,6 @@
     <span class="years">{{ p.years }}</span>
   </div>
   <p>{{ p.summary }}</p>
-  <div class="project-foot">{{ tags(p.tags) }}{% if p.code %}<a class="small-link" href="{{ p.code }}">code</a>{% endif %}</div>
+  {% if p.links %}<div class="project-foot">{% for l in p.links %}<a class="small-link" href="{{ l.url }}">{{ l.label }} →</a>{% endfor %}</div>{% endif %}
 </article>
 {% endmacro %}

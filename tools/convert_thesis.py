@@ -33,7 +33,8 @@ CHAPTERS = [
      "The need for life detection science, a looser definition of life, searching through chemical space, and life as a behavior (antifragility).", None),
 ]
 
-BODY_X = (106, 129)
+BODY_X = (106, 141)
+KEEP_HYPHEN = {"self", "non", "co", "multi", "cross", "high", "low", "semi", "anti", "well", "long", "short", "post", "pre", "in", "ex", "time", "salt", "acid", "life", "ice"}
 CAP_RE = re.compile(r"^(Figure|Table)\s+([A-Z]?\d+\.\d+):")
 CITE_RE = re.compile(r"\[(\d+(?:\s*[,–-]\s*\d+)*)\]")
 
@@ -98,19 +99,25 @@ def classify(page):
         if not plain:
             continue
         numm = re.match(r"^[A-Z]?\d+(\.\d+)+$", first["text"].strip())
-        if horiz and numm and ("Medi" in first["font"] or first["text"].count(".") >= 2) and len(plain) < 120 and x1 < 530:
+        if horiz and y0 > 450 and 8.5 <= max(sp["size"] for l in b["lines"] for sp in l["spans"]) <= 10.6 and x0 < 130:
+            sp0 = b["lines"][0]["spans"][0]
+            mark = sp0["text"].strip() if sp0["text"].strip().isdigit() and sp0["size"] < 9 else ""
+            body_t = html.escape(plain[len(mark):].strip() if mark else plain)
+            items.append({"kind": "footnote", "bbox": b["bbox"], "text": (f"<sup>{mark}</sup> " if mark else "") + body_t})
+            continue
+        if horiz and numm and ("Medi" in first["font"] or first["text"].count(".") >= 2) and len(plain) < 160 and x1 < 556:
             items.append({"kind": "heading", "bbox": b["bbox"], "plain": plain, "text": plain})
-        elif horiz and "Medi" in first["font"] and plain.upper() == plain and len(plain) > 3:
+        elif horiz and any("Medi" in sp["font"] for l in b["lines"] for sp in l["spans"]) and not any(c.islower() for c in plain if c.isascii()) and len(plain) > 3 and not numm:
             items.append({"kind": "title", "bbox": b["bbox"], "text": plain})
         elif horiz and CAP_RE.match(plain):
             items.append({"kind": "caption", "bbox": b["bbox"], "text": line_text(b)})
         elif not horiz:
             items.append({"kind": "float", "bbox": b["bbox"], "rot": b["lines"][0]["dir"]})
-        elif (BODY_X[0] <= x0 <= BODY_X[1] and x1 <= 542 and len(b["lines"]) == 1
+        elif (BODY_X[0] <= x0 <= BODY_X[1] and x1 <= 556 and len(b["lines"]) == 1
               and 11.5 <= first["size"] <= 12.5):
             heading = "Medi" in first["font"] and re.match(r"^[A-Z]?\d+(\.\d+)+$", first["text"].strip())
             items.append({"kind": "heading" if heading else "body", "bbox": b["bbox"],
-                          "text": line_text(b), "plain": plain, "indent": x0 > 120,
+                          "text": line_text(b), "plain": plain, "indent": 120 < x0 < 131,
                           "medi": "Medi" in first["font"]})
         elif "Medi" in first["font"] and horiz and first["size"] >= 11.5:
             items.append({"kind": "title", "bbox": b["bbox"], "text": plain})
@@ -118,15 +125,77 @@ def classify(page):
             items.append({"kind": "float", "bbox": b["bbox"]})
     for dr in page.get_drawings():
         r = dr["rect"]
-        if r.y0 < 735 and (r.width > 3 or r.height > 3):
+        if r.y0 < 735 and (r.width > 3 or r.height > 3) and not (r.height < 2 and 60 < r.width < 200 and r.x0 < 115 and r.y0 > 450):
             items.append({"kind": "float", "bbox": tuple(r)})
     items.sort(key=lambda it: (round(it["bbox"][1]), it["bbox"][0]))
+    in_table = False
+    for it in items:
+        if it["kind"] == "caption" and it["text"].startswith("Table"):
+            in_table = True
+            it["table_caption"] = True
+            continue
+        if in_table:
+            bodyish = it["kind"] in ("body", "heading") and (it["bbox"][2] - it["bbox"][0] > 300 or it["kind"] == "heading")
+            if bodyish or it["kind"] == "caption":
+                in_table = False
+            else:
+                it["kind"] = "table"
     return items
+
+
+def table_html(page, rect):
+    words = [w for w in page.get_text("words") if pymupdf.Rect(w[:4]).intersects(rect)]
+    if not words:
+        return ""
+    # column boundaries: x gaps not covered by any word
+    spans = sorted((w[0], w[2]) for w in words)
+    cols, cur = [], list(spans[0])
+    for x0, x1 in spans[1:]:
+        if x0 > cur[1] + 6:
+            cols.append(cur); cur = [x0, x1]
+        else:
+            cur[1] = max(cur[1], x1)
+    cols.append(cur)
+    def col_of(w):
+        for i, (x0, x1) in enumerate(cols):
+            if w[0] <= x1 + 1:
+                return i
+        return len(cols) - 1
+    # row bands from horizontal rules, if the table has them
+    rules = sorted({round(d["rect"].y0) for d in page.get_drawings()
+                    if d["rect"].height < 2 and d["rect"].width > 60 and rect.x0 - 5 <= d["rect"].x0 and d["rect"].y0 > rect.y0 - 30 and d["rect"].y0 < rect.y1 + 5})
+    def band(w):
+        if len(rules) < 3:
+            return round(w[3] / 4)
+        yc = (w[1] + w[3]) / 2
+        return sum(1 for r in rules if r < yc)
+    rows = {}
+    for w in sorted(words, key=lambda w: (w[3], w[0])):
+        rows.setdefault(band(w), {}).setdefault(col_of(w), []).append(w)
+    out = ["<div class='table-wrap'><table>"]
+    for ri, key in enumerate(sorted(rows)):
+        cells = []
+        for c in range(len(cols)):
+            ws = rows[key].get(c, [])
+            lines, last_y = [], None
+            for w in ws:
+                if last_y is not None and abs(w[3] - last_y) < 4:
+                    lines[-1].append(fix_acc(w[4]))
+                else:
+                    lines.append([fix_acc(w[4])])
+                last_y = w[3]
+            text = " ".join(" ".join(l) for l in lines) if len(rules) < 3 or c == 0 else "<br>".join(html.escape(" ".join(l)) for l in lines)
+            cells.append(text if "<br>" in text else html.escape(text))
+        tag = "th" if ri == 0 else "td"
+        out.append("<tr>" + "".join(f"<{tag}>{c}</{tag}>" for c in cells) + "</tr>")
+    out.append("</table></div>")
+    return "".join(out)
 
 
 def convert(stem, title, a, b, summary, published):
     out = []
     para = []
+    notes = []
     fig_n = [0]
 
     def flush():
@@ -134,7 +203,8 @@ def convert(stem, title, a, b, summary, published):
             text = ""
             for t in para:
                 if text.endswith("-") and t[:1].islower():
-                    text = text[:-1] + t
+                    prev = re.split(r"[\s(]", text[:-1])[-1].lower()
+                    text = (text + t) if prev in KEEP_HYPHEN else text[:-1] + t
                 else:
                     text = (text + " " + t) if text else t
             out.append(f"<p>{link_cites(text)}</p>")
@@ -148,6 +218,14 @@ def convert(stem, title, a, b, summary, published):
             it = items[i]
             k = it["kind"]
             if k == "title":
+                i += 1
+                continue
+            if k == "footnote":
+                t = it["text"]
+                if notes and not re.match(r"^\s*<sup>\d", t):
+                    notes[-1] += " " + t
+                else:
+                    notes.append(t)
                 i += 1
                 continue
             if k == "heading":
@@ -174,11 +252,20 @@ def convert(stem, title, a, b, summary, published):
             flush()
             group = [it]
             j = i + 1
-            while j < len(items) and items[j]["kind"] in ("float", "caption"):
+            while j < len(items) and items[j]["kind"] in ("float", "caption", "table"):
                 group.append(items[j])
                 j += 1
             caps = [g for g in group if g["kind"] == "caption"]
-            region = [g for g in group if g["kind"] == "float"]
+            tbl = [g for g in group if g["kind"] == "table" and not g.get("rot")]
+            if tbl and not any(g.get("rot") for g in group):
+                for c in caps:
+                    out.append(f"<p class='caption'>{link_cites(c['text'])}</p>")
+                tr = pymupdf.Rect(min(g["bbox"][0] for g in tbl), min(g["bbox"][1] for g in tbl),
+                                  max(g["bbox"][2] for g in tbl), max(g["bbox"][3] for g in tbl))
+                out.append(table_html(page, tr))
+                i = j
+                continue
+            region = [g for g in group if g["kind"] in ("float", "table")]
             if region:
                 x0 = min(g["bbox"][0] for g in region)
                 y0 = min(g["bbox"][1] for g in region)
@@ -210,6 +297,8 @@ def convert(stem, title, a, b, summary, published):
                 out.append(f"<p class='caption'>{link_cites(c['text'])}</p>")
             i = j
     flush()
+    if notes:
+        out.append("<div class='footnotes'><h2>Notes</h2>" + "".join(f"<p>{link_cites(n)}</p>" for n in notes) + "</div>")
     fm = [f'title: "{title}"', f'summary: "{summary}"']
     if published:
         fm.append(f'published: "{published}"')

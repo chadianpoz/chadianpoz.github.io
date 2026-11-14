@@ -15,6 +15,10 @@ title: CV
 - Built the Otea, a portable CE-LIF biomolecule reader with disposable plastic microfluidic cartridges, at about 1% of the cost of commercial systems.
 - PI on an NSF SBIR (Small Business Innovation Research) Phase I award.
 
+**Swarm BLAST** · AI Swarm Dynamics Hackathon (AI Village and Grove Research) · San Francisco · October 2026
+
+- Led our team to build a testbed of 8-agent teams across six LLMs that uses bio-inspired tools to detect self-replicating prompts spreading between agents. [Project site](https://chadianpoz.github.io/swarm-blast/) · [code](https://github.com/vikasreddy85/swarm-blast)
+
 **Georgia Institute of Technology, Stockton Lab** · PhD Researcher · Atlanta, GA · 2021 to 2025
 
 - Dissertation: *[Molecular Biosignature Detection in Hypersaline Planetary Analogs](/thesis/)*, for the NASA Oceans Across Space and Time consortium.
@@ -25,7 +29,7 @@ title: CV
 **NASA Goddard Space Flight Center** · Researcher · Greenbelt, MD · 2019 to 2021
 
 - Planetary Environments Lab: searched for organic signs of life on Mars with the Curiosity rover's Sample Analysis at Mars (SAM) team. Optimized the SAM wet chemistry experiment for Glen Torridon, Gale crater.
-- Astrobiology Analytical Laboratory: measured amino acids in the Asuka 12236 meteorite and 1-billion-year-old subterranean water. Developed a desalting procedure for low-biomass samples.
+- Astrobiology Analytical Laboratory: measured amino acids in meteorites and 1-billion-year-old subterranean water. Developed a desalting procedure for low-biomass samples.
 
 **Georgetown University, NASA Laboratory for Agnostic Biosignatures** · Researcher · Washington, DC · 2020 to 2021
 
