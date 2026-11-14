@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+<rect width="1000" height="560" rx="10" fill="#fbf9f4"/>
+<defs><pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="14" stroke="#7a7366" stroke-width="1.4"/></pattern>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3e6cf"/><stop offset="1" stop-color="#fbf9f4"/></linearGradient>
+<linearGradient id="water" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#5b8fc9"/><stop offset="1" stop-color="#2f5f99"/></linearGradient></defs>
+<rect x="0" y="0" width="1000" height="190" rx="10" fill="url(#sky)"/>
+<path d="M40,470 L40,162 C200,150 420,156 560,152 L603.9,150 L603.9,150 L606.0,156 L607.8,162 L609.2,168 L610.1,174 L610.6,180 L610.5,186 L609.9,192 L608.8,198 L607.3,204 L605.5,210 L603.6,216 L601.6,222 L599.8,228 L598.2,234 L597.0,240 L596.3,246 L596.0,252 L596.4,258 L597.2,264 L598.5,270 L600.2,276 L602.2,282 L604.4,288 L606.6,294 L608.7,300 L610.5,306 L612.0,312 L613.0,318 L613.5,324 L613.4,330 L612.8,336 L611.8,342 L610.3,348 L608.6,354 L606.6,360 L604.7,366 L602.8,372 L601.2,378 L600.0,384 L599.2,390 L598.9,396 L599.2,402 L600.0,408 L601.3,414 L603.0,420 L604.9,426 L607.1,432 L609.3,438 L611.4,444 L613.2,450 L614.7,456 L615.8,462 L616.3,468 L40,470 Z" fill="#efe2cc" stroke="#2b2824" stroke-width="1.6"/>
+<path d="M671.5,112 L700,104 C780,108 880,118 960,114 L960,470 L665.0,468 L663.0,462 L661.0,456 L659.0,450 L657.3,444 L656.1,438 L655.5,432 L655.5,426 L656.3,420 L657.7,414 L659.6,408 L661.8,402 L664.1,396 L666.3,390 L668.2,384 L669.7,378 L670.5,372 L670.6,366 L670.0,360 L668.9,354 L667.2,348 L665.2,342 L663.1,336 L661.2,330 L659.5,324 L658.4,318 L657.8,312 L658.0,306 L658.8,300 L660.3,294 L662.2,288 L664.4,282 L666.7,276 L668.9,270 L670.8,264 L672.2,258 L672.9,252 L673.0,246 L672.3,240 L671.1,234 L669.4,228 L667.4,222 L665.3,216 L663.4,210 L661.8,204 L660.7,198 L660.2,192 L660.4,186 L661.3,180 L662.8,174 L664.8,168 L667.1,162 L669.4,156 L671.5,150 Z" fill="#efe2cc" stroke="#2b2824" stroke-width="1.6"/>
+<clipPath id="cw"><path d="M40,470 L40,162 C200,150 420,156 560,152 L603.9,150 L603.9,150 L606.0,156 L607.8,162 L609.2,168 L610.1,174 L610.6,180 L610.5,186 L609.9,192 L608.8,198 L607.3,204 L605.5,210 L603.6,216 L601.6,222 L599.8,228 L598.2,234 L597.0,240 L596.3,246 L596.0,252 L596.4,258 L597.2,264 L598.5,270 L600.2,276 L602.2,282 L604.4,288 L606.6,294 L608.7,300 L610.5,306 L612.0,312 L613.0,318 L613.5,324 L613.4,330 L612.8,336 L611.8,342 L610.3,348 L608.6,354 L606.6,360 L604.7,366 L602.8,372 L601.2,378 L600.0,384 L599.2,390 L598.9,396 L599.2,402 L600.0,408 L601.3,414 L603.0,420 L604.9,426 L607.1,432 L609.3,438 L611.4,444 L613.2,450 L614.7,456 L615.8,462 L616.3,468 L40,470 Z"/></clipPath><clipPath id="ce"><path d="M671.5,112 L700,104 C780,108 880,118 960,114 L960,470 L665.0,468 L663.0,462 L661.0,456 L659.0,450 L657.3,444 L656.1,438 L655.5,432 L655.5,426 L656.3,420 L657.7,414 L659.6,408 L661.8,402 L664.1,396 L666.3,390 L668.2,384 L669.7,378 L670.5,372 L670.6,366 L670.0,360 L668.9,354 L667.2,348 L665.2,342 L663.1,336 L661.2,330 L659.5,324 L658.4,318 L657.8,312 L658.0,306 L658.8,300 L660.3,294 L662.2,288 L664.4,282 L666.7,276 L668.9,270 L670.8,264 L672.2,258 L672.9,252 L673.0,246 L672.3,240 L671.1,234 L669.4,228 L667.4,222 L665.3,216 L663.4,210 L661.8,204 L660.7,198 L660.2,192 L660.4,186 L661.3,180 L662.8,174 L664.8,168 L667.1,162 L669.4,156 L671.5,150 Z"/></clipPath>
+<path clip-path="url(#cw)" d="M40,172 C250.0,167 410.0,178 620,173" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,172 C725.0,167 885.0,178 960,173" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,198 C250.0,193 410.0,204 620,199" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,198 C725.0,193 885.0,204 960,199" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,224 C250.0,219 410.0,230 620,225" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,224 C725.0,219 885.0,230 960,225" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,250 C250.0,245 410.0,256 620,251" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,250 C725.0,245 885.0,256 960,251" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,276 C250.0,271 410.0,282 620,277" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,276 C725.0,271 885.0,282 960,277" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,302 C250.0,297 410.0,308 620,303" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,302 C725.0,297 885.0,308 960,303" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,328 C250.0,323 410.0,334 620,329" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,328 C725.0,323 885.0,334 960,329" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,354 C250.0,349 410.0,360 620,355" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,354 C725.0,349 885.0,360 960,355" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,380 C250.0,375 410.0,386 620,381" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,380 C725.0,375 885.0,386 960,381" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,406 C250.0,401 410.0,412 620,407" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,406 C725.0,401 885.0,412 960,407" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,432 C250.0,427 410.0,438 620,433" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,432 C725.0,427 885.0,438 960,433" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#cw)" d="M40,458 C250.0,453 410.0,464 620,459" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<path clip-path="url(#ce)" d="M650,458 C725.0,453 885.0,464 960,459" fill="none" stroke="#b9a684" stroke-width="1.1"/>
+<rect x="40" y="470" width="920" height="54" fill="url(#hatch)" stroke="#2b2824" stroke-width="1.4"/>
+<rect x="40" y="470" width="920" height="54" fill="none" stroke="#2b2824" stroke-width="1.4"/>
+<path d="M120,318 L560.0634291475449,262 L560.0634291475449,296 L120,352 Z" fill="#fbf9f4" stroke="none"/>
+<path d="M560.0634291475449,262 L596.0634291475449,240 L596.0634291475449,260 L560.0634291475449,296 Z" fill="#fbf9f4"/>
+<line x1="120" y1="318" x2="560.0634291475449" y2="262" stroke="#4a3320" stroke-width="7" stroke-linecap="round"/>
+<line x1="120" y1="352" x2="560.0634291475449" y2="296" stroke="#4a3320" stroke-width="7" stroke-linecap="round"/>
+<circle cx="596.1" cy="250" r="7" fill="#2b2824"/>
+<circle cx="910" cy="52" r="16" fill="#f2b632"/>
+<line x1="932.0" y1="52.0" x2="941.0" y2="52.0" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="929.1" y1="63.0" x2="936.8" y2="67.5" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="921.0" y1="71.1" x2="925.5" y2="78.8" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="910.0" y1="74.0" x2="910.0" y2="83.0" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="899.0" y1="71.1" x2="894.5" y2="78.8" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="890.9" y1="63.0" x2="883.2" y2="67.5" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="888.0" y1="52.0" x2="879.0" y2="52.0" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="890.9" y1="41.0" x2="883.2" y2="36.5" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="899.0" y1="32.9" x2="894.5" y2="25.2" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="910.0" y1="30.0" x2="910.0" y2="21.0" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="921.0" y1="32.9" x2="925.5" y2="25.2" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="929.1" y1="41.0" x2="936.8" y2="36.5" stroke="#f2b632" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M634,120 C630,220 644,330 638,410 L648,410 C654,330 642,220 648,120 Z" fill="url(#water)" opacity="0.9"/>
+<line x1="896" y1="62" x2="641" y2="200" stroke="#e8a21a" stroke-width="2.4"/>
+<line x1="641" y1="200" x2="596.1" y2="250" stroke="#e8a21a" stroke-width="2.4"/>
+<polyline points="596.1,250.0 550.1,293.3 492.1,274.7 434.1,308.0 376.1,289.4 318.1,322.8 260.1,304.2 202.1,337.6 144.1,318.9" fill="none" stroke="#e8a21a" stroke-width="2" stroke-dasharray="1 0"/>
+<circle cx="550.1" cy="293.3" r="3" fill="#e8a21a"/>
+<circle cx="492.1" cy="274.7" r="3" fill="#e8a21a"/>
+<circle cx="434.1" cy="308.0" r="3" fill="#e8a21a"/>
+<circle cx="376.1" cy="289.4" r="3" fill="#e8a21a"/>
+<circle cx="318.1" cy="322.8" r="3" fill="#e8a21a"/>
+<circle cx="260.1" cy="304.2" r="3" fill="#e8a21a"/>
+<circle cx="202.1" cy="337.6" r="3" fill="#e8a21a"/>
+<circle cx="144.1" cy="318.9" r="3" fill="#e8a21a"/>
+<line x1="470" y1="205" x2="592.0634291475449" y2="244" stroke="#7a7366" stroke-width="1"/>
+<text x="466" y="185" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="end">Western Wall</text>
+<text x="466" y="199" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="end">Aperture</text>
+<line x1="560" y1="110" x2="640" y2="190" stroke="#7a7366" stroke-width="1"/>
+<text x="556" y="90" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="end">Waterfall</text>
+<text x="556" y="104" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="end">(hypothesized)</text>
+<line x1="780" y1="170" x2="700" y2="122" stroke="#7a7366" stroke-width="1"/>
+<text x="784" y="150" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="start">Southern Aperture</text>
+<text x="784" y="164" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="start">Feature</text>
+<text x="910" y="104" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="middle">Southern sky</text>
+<line x1="150" y1="395" x2="250" y2="339.45693025639" stroke="#7a7366" stroke-width="1"/>
+<text x="154" y="375" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="start">Floor and ceiling coated in</text>
+<text x="154" y="389" font-family="JetBrains Mono, Menlo, monospace" font-size="12.5" fill="#2b2824" text-anchor="start">desert varnish (10.8 cm apart)</text>
+<text x="160" y="235" font-family="JetBrains Mono, Menlo, monospace" font-size="12" fill="#c58612">lensed sunlight reflects</text>
+<text x="160" y="251" font-family="JetBrains Mono, Menlo, monospace" font-size="12" fill="#c58612">between the two surfaces</text>
+<text x="50" y="546" font-family="JetBrains Mono, Menlo, monospace" font-size="11.5" fill="#7a7366">Navajo sandstone, Glen Canyon group · not to scale</text>
+<path d="M690,104 C700,112 712,130 706,150 C700,162 688,160 684,150" fill="#fbf9f4" stroke="#2b2824" stroke-width="1.4"/></svg>
