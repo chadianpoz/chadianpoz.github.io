@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% from "macros.html" import pub, postrow, project %}
 {% block mainclass %}home{% endblock %}
 {% block content %}
 <section class="intro">
@@ -11,18 +10,4 @@
   <p>The common thread is measurement you can check. A model's prediction about a body, a brine, or another planet is only as good as the instrument that tests it. Lately I am also applying methods from life detection to AI agents, such as finding <a href="https://chadianpoz.github.io/swarm-blast/">self-replicating prompts in agent swarms</a>.</p>
 </section>
 
-<section>
-  <div class="section-head"><h2>Selected publications</h2><a href="/publications/">all publications →</a></div>
-  <ol class="pubs">{% for p in selected %}{{ pub(p) }}{% endfor %}</ol>
-</section>
-
-<section>
-  <div class="section-head"><h2>Projects</h2><a href="/projects/">all projects →</a></div>
-  <div class="project-grid">{% for p in projects %}{{ project(p) }}{% endfor %}</div>
-</section>
-
-<section>
-  <div class="section-head"><h2>Recent writing</h2><a href="/writing/">all writing →</a></div>
-  <ul class="postlist">{% for p in posts %}{{ postrow(p) }}{% endfor %}</ul>
-</section>
 {% endblock %}
