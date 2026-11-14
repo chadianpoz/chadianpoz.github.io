@@ -74,7 +74,7 @@ def fetch_feeds(site):
         url, source = feed["url"], feed["source"]
         print(f"fetching {url}")
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 site-builder"})
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36", "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.8"})
             data = urllib.request.urlopen(req, timeout=30).read()
         except Exception as e:  # keep building even if a feed is down
             print(f"  could not fetch: {e}")

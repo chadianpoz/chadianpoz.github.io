@@ -214,3 +214,5 @@ main.reading { max-width: 700px; }
 .refs li { margin-bottom: 8px; }
 .refs li:target { background: var(--accent-soft); }
 @media (prefers-color-scheme: dark) { .prose figure img { filter: brightness(0.92); } }
+.prose .footnotes { margin-top: 40px; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted); }
+.prose .footnotes p { margin: 6px 0; }
