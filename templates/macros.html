@@ -21,12 +21,11 @@
 {% endmacro %}
 
 {% macro project(p) %}
-<article class="project">
+{% if p.url %}<a class="project project-link" href="{{ p.url }}">{% else %}<article class="project">{% endif %}
   <div class="project-head">
-    <h3>{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+    <h3>{{ p.title }}</h3>
     <span class="years">{{ p.years }}</span>
   </div>
   <p>{{ p.summary }}</p>
-  {% if p.links %}<div class="project-foot">{% for l in p.links %}<a class="small-link" href="{{ l.url }}">{{ l.label }} →</a>{% endfor %}</div>{% endif %}
-</article>
+{% if p.url %}</a>{% else %}</article>{% endif %}
 {% endmacro %}

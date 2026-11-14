@@ -1,32 +1,22 @@
-# group: Deleon, Personal, or Research. featured: shown on the home page. links: buttons under the card.
+# group: Deleon, Personal, or Research. featured: shown on the home page. url: where the card links.
 
 - title: Otea
   group: Deleon
   featured: true
   years: 2025 to now
-  url: /writing/otea-daily-metabolomics/
+  url: https://deleon.bio/article?slug=2026-10-01-otea-daily-metabolomics
   summary: 'A portable biomolecule reader that runs capillary electrophoresis with laser-induced fluorescence (CE-LIF)
     on disposable plastic microfluidic chips. It runs autonomously in a participant''s home: under 10 µL of sample,
     2-minute separations, under 3 kg and 12 W, about $1 per analysis, and about 3% chip-to-chip variation. Its design
     comes from two decades of NASA work on autonomous instruments for Mars and Europa.'
-  links:
-  - label: read the post
-    url: /writing/otea-daily-metabolomics/
-  - label: original on Deleon
-    url: https://deleon.bio/article?slug=2026-10-01-otea-daily-metabolomics
 - title: Exploreon
   group: Deleon
   featured: true
   years: '2026'
-  url: /writing/information-space/
+  url: https://deleon.bio/article?slug=information-space
   summary: An experiment design model that chooses which measurement to take next, for each person, to teach a world
     model of human metabolism the most per sample. In simulated studies it reached the same final accuracy as Claude
     Opus 5.5 and Monte Carlo sampling with 7x and 12x less data.
-  links:
-  - label: read the post
-    url: /writing/information-space/
-  - label: original on Deleon
-    url: https://deleon.bio/article?slug=information-space
 - title: Juniper
   group: Deleon
   featured: true
@@ -52,11 +42,6 @@
     DNA sequence-search tool) that find self-replicating prompts as they spread between agents. Lexical, semantic,
     and behavioral detectors, transmission trees, and an epidemic-style simulator. Detection worked even when agents
     reworded the prompt (AUC up to 0.98).
-  links:
-  - label: project site
-    url: https://chadianpoz.github.io/swarm-blast/
-  - label: code
-    url: https://github.com/vikasreddy85/swarm-blast
 - title: Submersible water activity meter (SWAM)
   group: Research
   years: '2022'
@@ -67,10 +52,4 @@
   years: 2021 to 2023
   summary: Led sampling at the Orca Basin deep hypersaline anoxic basin in the Gulf of Mexico (R/V Point Sur, 2023),
     the transient acidic lakes of Western Australia (2022), and Valles Caldera, New Mexico (2021).
-  links:
-  - label: thesis, chapter 3
-    url: /thesis/evaporitic-brines/
-  - label: chapter 4
-    url: /thesis/western-australia/
-  - label: chapter 5
-    url: /thesis/fatty-acids/
+  url: /thesis/

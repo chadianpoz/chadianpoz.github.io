@@ -239,3 +239,7 @@ main.reading { max-width: 700px; }
 .intro::after { content: ""; display: block; clear: both; }
 .portrait { float: right; width: 210px; height: auto; margin: 6px 0 16px 28px; border-radius: 4px; }
 @media (max-width: 640px) { .portrait { float: none; display: block; width: 160px; margin: 0 0 18px; } }
+
+a.project-link { text-decoration: none; color: inherit; transition: border-color .15s; }
+a.project-link:hover { border-color: var(--accent); }
+a.project-link:hover h3 { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
