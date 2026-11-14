@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% from "macros.html" import project %}
+{% block title %}Projects · {{ site.name }}{% endblock %}
+{% block content %}
+<h1 class="page-title">Projects</h1>
+{% for group, label in [("Deleon","At Deleon"),("Personal","Personal and AI projects"),("Research","Research instruments and field work")] %}
+{% set items = projects | selectattr("group","equalto",group) | list %}
+{% if items %}<h2 class="label">{{ label }}</h2><div class="project-grid">{% for p in items %}{{ project(p) }}{% endfor %}</div>{% endif %}
+{% endfor %}
+{% endblock %}

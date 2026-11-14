@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} · {{ site.name }}{% endblock %}
+{% block description %}{{ post.summary or site.description }}{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ post.original_url or (site.url ~ path) }}">{% endblock %}
+{% block mainclass %}reading{% endblock %}
+{% block content %}
+<article class="post">
+  <header>
+    <div class="post-meta"><time>{{ post.date | datefmt }}</time>{% if post.source_label %}<span class="tag src-{{ post.source }}">{{ post.source_label }}</span>{% endif %}</div>
+    <h1>{{ post.title }}</h1>
+    {% if post.subtitle %}<p class="subtitle">{{ post.subtitle }}</p>{% endif %}
+    {% if post.original_url %}<p class="origin">First published on {{ post.source_label or "another site" }}. <a href="{{ post.original_url }}">Read the original →</a></p>{% endif %}
+  </header>
+  <div class="prose">{{ post.html | safe }}</div>
+</article>
+<nav class="pager">
+  {% if older %}<a href="{{ older.url }}">← {{ older.title }}</a>{% else %}<span></span>{% endif %}
+  {% if newer %}<a href="{{ newer.url }}">{{ newer.title }} →</a>{% endif %}
+</nav>
+{% endblock %}

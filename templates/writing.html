@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% from "macros.html" import postrow %}
+{% block title %}Writing · {{ site.name }}{% endblock %}
+{% block content %}
+<h1 class="page-title">Writing</h1>
+<p class="page-intro">Essays and posts from my <a href="https://chadpoz.substack.com">Substack</a>, the <a href="https://deleon.bio">Deleon blog</a>, and <a href="https://x.com/cheyava_falls">X</a>, collected here in full so they are easy to read in one place. Each post links to where it first appeared. Posts marked SpaceNews open on the SpaceNews site.</p>
+{% set ns = namespace(year=None) %}
+{% for p in posts %}
+{% if p.date.year != ns.year %}{% if ns.year %}</ul>{% endif %}<h2 class="label">{{ p.date.year }}</h2><ul class="postlist">{% set ns.year = p.date.year %}{% endif %}
+{{ postrow(p) }}
+{% endfor %}
+{% if ns.year %}</ul>{% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% macro tags(list) %}{% if list %}<span class="tags">{% for t in list %}<span class="tag">{{ t }}</span>{% endfor %}</span>{% endif %}{% endmacro %}
+
+{% macro pub(p, show_blurb=true) %}
+<li class="pub">
+  <div class="pub-year">{{ p.year }}</div>
+  <div class="pub-body">
+    <div class="pub-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.first %} <span class="badge">first author</span>{% endif %}</div>
+    {% if p.authors %}<div class="pub-authors">{{ p.authors | bold_me | safe }}</div>{% endif %}
+    <div class="pub-venue">{{ p.venue }}</div>
+    {% if show_blurb and p.blurb %}<p class="pub-blurb">{{ p.blurb }}</p>{% endif %}
+    {% if show_blurb and p.role %}<p class="pub-role"><span>My part</span> {{ p.role }}</p>{% endif %}
+  </div>
+</li>
+{% endmacro %}
+
+{% macro postrow(p) %}
+<li class="postrow">
+  <time>{{ p.date.strftime('%Y-%m-%d') }}</time>
+  <a href="{{ p.url }}">{{ p.title }}</a>
+  {% if p.source_label %}<span class="tag src-{{ p.source }}">{{ p.source_label }}</span>{% endif %}
+</li>
+{% endmacro %}
+
+{% macro project(p) %}
+<article class="project">
+  <div class="project-head">
+    <h3>{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+    <span class="years">{{ p.years }}</span>
+  </div>
+  <p>{{ p.summary }}</p>
+  <div class="project-foot">{{ tags(p.tags) }}{% if p.code %}<a class="small-link" href="{{ p.code }}">code</a>{% endif %}</div>
+</article>
+{% endmacro %}

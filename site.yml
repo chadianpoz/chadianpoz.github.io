@@ -1,0 +1,35 @@
+name: Chad Pozarycki
+url: https://chadianpoz.github.io
+description: Analytical chemist and founder. Autonomous instruments, human biochemistry, and the search for life.
+
+# Names to bold in author lists
+author_highlight: ["C Pozarycki", "CI Pozarycki", "Pozarycki CI", "Pozarycki C", "Chad Pozarycki"]
+
+nav:
+  - { title: about, url: / }
+  - { title: publications, url: /publications/ }
+  - { title: projects, url: /projects/ }
+  - { title: writing, url: /writing/ }
+  - { title: thesis, url: /thesis/ }
+  - { title: cv, url: /cv/ }
+
+links:
+  - { label: Google Scholar, url: "https://scholar.google.com/citations?user=kVl64nwAAAAJ&hl=en" }
+  - { label: GitHub, url: "https://github.com/chadianpoz" }
+  - { label: Deleon, url: "https://deleon.bio" }
+  - { label: Substack, url: "https://chadpoz.substack.com" }
+  - { label: X, url: "https://x.com/cheyava_falls" }
+  - { label: RSS, url: "/feed.xml" }
+
+# Where each post comes from. "label" shows as a tag on the post.
+sources:
+  site: { label: "" }
+  deleon: { label: "Deleon blog" }
+  substack: { label: "Substack" }
+  x: { label: "X" }
+  spacenews: { label: "SpaceNews" }
+
+# RSS feeds to import in full on each build (python build.py --fetch).
+# Substack feeds are at https://NAME.substack.com/feed
+feeds:
+  - { url: "https://chadpoz.substack.com/feed", source: substack }

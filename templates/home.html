@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "macros.html" import pub, postrow, project %}
+{% block mainclass %}home{% endblock %}
+{% block content %}
+<section class="intro">
+  <h1>Chad Pozarycki</h1>
+  <div class="trace" aria-hidden="true">{% include "trace.svg" %}</div>
+  <p class="lede">I build instruments that measure the chemistry of life, and AI systems that decide what to measure next.</p>
+  <p>I am co-founder and CEO of <a href="https://deleon.bio">Deleon Technologies</a>, an AI research company that measures human biochemistry every day, inside living people, to train models of human metabolism. We built the <a href="/writing/otea-daily-metabolomics/">Otea</a>, a portable chemical analyzer that runs in a participant's home at about 1% of the cost of commercial instruments, and <a href="/writing/information-space/">Exploreon</a>, a model that chooses the most informative next experiment for each person.</p>
+  <p>Before Deleon I worked on the search for life beyond Earth. At NASA Goddard I was part of the Curiosity rover's Sample Analysis at Mars (SAM) team, where I ran the Earth testbed experiments behind the rover's search for organic molecules in Gale crater. At Georgetown, with the NASA Laboratory for Agnostic Biosignatures, I worked on how to recognize life without assuming it uses Earth's biochemistry. My PhD in analytical chemistry at Georgia Tech, in Amanda Stockton's lab, studied how salt hides and preserves the molecular evidence of life, with field work from the Orca Basin brine pool in the Gulf of Mexico to the acid lakes of Western Australia.</p>
+  <p>The common thread is measurement you can check. A model's prediction about a body, a brine, or another planet is only as good as the instrument that tests it. Lately I am also applying methods from life detection to AI agents, such as finding <a href="https://chadianpoz.github.io/swarm-blast/">self-replicating prompts in agent swarms</a>.</p>
+</section>
+
+<section>
+  <div class="section-head"><h2>Selected publications</h2><a href="/publications/">all publications →</a></div>
+  <ol class="pubs">{% for p in selected %}{{ pub(p) }}{% endfor %}</ol>
+</section>
+
+<section>
+  <div class="section-head"><h2>Projects</h2><a href="/projects/">all projects →</a></div>
+  <div class="project-grid">{% for p in projects %}{{ project(p) }}{% endfor %}</div>
+</section>
+
+<section>
+  <div class="section-head"><h2>Recent writing</h2><a href="/writing/">all writing →</a></div>
+  <ul class="postlist">{% for p in posts %}{{ postrow(p) }}{% endfor %}</ul>
+</section>
+{% endblock %}

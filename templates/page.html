@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} · {{ site.name }}{% endblock %}
+{% block mainclass %}reading{% endblock %}
+{% block content %}
+<h1 class="page-title">{{ page.title }}</h1>
+{% if page.pdf %}<p class="page-intro"><a href="{{ page.pdf }}">Download PDF</a></p>{% endif %}
+<div class="prose cv">{{ page.html | safe }}</div>
+{% endblock %}

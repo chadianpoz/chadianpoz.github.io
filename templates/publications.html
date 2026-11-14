@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "macros.html" import pub %}
+{% block title %}Publications · {{ site.name }}{% endblock %}
+{% block content %}
+<h1 class="page-title">Publications</h1>
+<p class="page-intro">Peer-reviewed papers, preprints, and selected talks. The complete list, with conference abstracts, is on <a href="{{ pubs.scholar_url }}">Google Scholar</a>.</p>
+<h2 class="label">Journal articles</h2>
+<ol class="pubs">{% for p in pubs.journal %}{{ pub(p) }}{% endfor %}</ol>
+<h2 class="label">Preprints</h2>
+<ol class="pubs">{% for p in pubs.preprints %}{{ pub(p) }}{% endfor %}</ol>
+<h2 class="label">Dissertation, proceedings, and chapters</h2>
+<ol class="pubs">{% for p in pubs.other %}{{ pub(p) }}{% endfor %}</ol>
+<h2 class="label">Selected talks and abstracts (first author)</h2>
+<ol class="pubs compact">{% for p in pubs.abstracts %}{{ pub(p) }}{% endfor %}</ol>
+{% endblock %}

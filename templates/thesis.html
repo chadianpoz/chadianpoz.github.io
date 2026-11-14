@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Thesis · {{ site.name }}{% endblock %}
+{% block mainclass %}reading{% endblock %}
+{% block content %}
+<article class="post">
+  <header>
+    <div class="post-meta"><span class="tag">PhD thesis</span></div>
+    <h1>{{ intro.title }}</h1>
+  </header>
+  <div class="prose">{{ intro.html | safe }}</div>
+  {% if chapters %}
+  <h2 class="label">Chapters</h2>
+  <ul class="chapters">{% for c in chapters %}<li><a href="{{ c.url }}">{{ c.title }}</a>{% if c.summary %}<p>{{ c.summary }}</p>{% endif %}</li>{% endfor %}</ul>
+  {% endif %}
+</article>
+{% endblock %}

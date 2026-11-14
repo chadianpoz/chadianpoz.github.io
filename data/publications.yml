@@ -1,0 +1,153 @@
+# Fields: title, authors, venue, year, url, tags, blurb, role, selected (shown on home page), first (first author)
+
+journal:
+  - title: "Diverse organic molecules on Mars revealed by the first SAM TMAH experiment"
+    authors: "AJ Williams, JL Eigenbrode, M Millan, RH Williams, OM Mcintosh, ..., C Pozarycki, ..., A Vasavada"
+    venue: "Nature Communications 17, 2748"
+    year: 2026
+    url: "https://doi.org/10.1038/s41467-026-70656-0"
+    tags: [Mars]
+    selected: true
+    blurb: >-
+      The first tetramethylammonium hydroxide (TMAH) thermochemolysis experiment run on Mars by the
+      Curiosity rover's Sample Analysis at Mars (SAM) instrument. TMAH breaks large organic molecules into
+      fragments that SAM can identify, and the experiment revealed a diverse set of organic molecules
+      in Gale crater.
+    role: >-
+      As a member of the SAM team at NASA Goddard, I ran experimental iterations of the method on the
+      Earth testbed instrument to inform result interpretation and instrument methods.
+
+  - title: "Free-living autotrophs drive a carbon fixation peak within the Orca Basin chemocline while heterotrophs dominate total activity from seawater to brine"
+    authors: "ER Paris, RSR Salcedo, S Buessecker, C Pozarycki, M Desmarais, ..."
+    venue: "The ISME Journal, wrag279"
+    year: 2026
+    url: "https://doi.org/10.1093/ismejo/wrag279"
+    tags: [Brines]
+    blurb: >-
+      Measures microbial activity from seawater down into the brine of the Orca Basin, a deep hypersaline
+      anoxic basin in the Gulf of Mexico. Carbon fixation peaks in the chemocline, the transition layer
+      between seawater and brine.
+
+  - title: "Groundwater connectivity and buffering in Western Australian hypersaline lakes: Implications for late-stage Martian lacustrine systems"
+    authors: "TA Plattner, BE Schmidt, NM Fernandez, PT Doran, MA Birmingham, ..."
+    venue: "Earth and Space Science 13 (7), e2026EA005066"
+    year: 2026
+    url: "https://doi.org/10.1029/2026EA005066"
+    tags: [Brines, Mars]
+    blurb: >-
+      Shows how groundwater connects and buffers the acidic, hypersaline lakes of Western Australia,
+      and what that means for the last lakes on Mars.
+
+  - title: "Biosignature molecules accumulate and persist in evaporitic brines: implications for planetary exploration"
+    authors: "C Pozarycki, KM Seaton, EC Vincent, C Novak Sanders, N Nuñez, M Castillo, E Ingall, B Klempay, A Pontefract, L Fisher, E Paris, S Buessecker, N Alansson, C Carr, P Doran, J Bowman, B Schmidt, AM Stockton"
+    venue: "Astrobiology 24 (8), 795-812"
+    year: 2024
+    url: "https://doi.org/10.1089/ast.2023.0122"
+    tags: [Brines, Life detection]
+    selected: true
+    first: true
+    blurb: >-
+      Salt evaporation ponds at South Bay Salt Works concentrate seawater step by step, which makes them a
+      natural experiment for brines on Mars and the ocean worlds. Amino acids reached concentrations above
+      7 mM in the most concentrated brines, and fragile molecules such as ATP persisted. Salty places
+      concentrate the evidence of life instead of destroying it, so they are good places to look.
+
+  - title: "A robust capillary electrophoresis with laser-induced fluorescence detection (CE-LIF) method for quantitative compositional analysis of trace amino acids in hypersaline samples"
+    authors: "KM Seaton, CI Pozarycki, N Nuñez, AM Stockton, the Oceans Across Space and Time team"
+    venue: "ACS Earth and Space Chemistry 7 (11), 2214-2221"
+    year: 2023
+    url: "https://doi.org/10.1021/acsearthspacechem.3c00162"
+    tags: [Instruments, Brines]
+    selected: true
+    blurb: >-
+      Salt usually ruins sensitive chemical separations. This method measures trace amino acids directly
+      in hypersaline brines with capillary electrophoresis and laser-induced fluorescence, down to very low
+      detection limits. I later commercialized this method at Deleon.
+
+  - title: "Sedimentary organics in Glen Torridon, Gale Crater, Mars: Results from the SAM instrument suite and supporting laboratory analyses"
+    authors: "M Millan, AJ Williams, AC McAdam, JL Eigenbrode, A Steele, C Freissinet, ..., C Pozarycki, ..., PR Mahaffy"
+    venue: "Journal of Geophysical Research: Planets 127 (11), e2021JE007107"
+    year: 2022
+    url: "https://doi.org/10.1029/2021JE007107"
+    tags: [Mars]
+    selected: true
+    blurb: >-
+      Results from the Curiosity rover's search for organic molecules in the clay-rich Glen Torridon
+      region of Gale crater, using SAM's wet chemistry (MTBSTFA derivatization) and pyrolysis experiments,
+      supported by laboratory work on Mars-analog samples.
+    role: >-
+      I optimized the SAM wet chemistry experiment for Glen Torridon on the Earth testbed instrument.
+      Uplinks to the rover were modified because of results I obtained, and organics were identified in the
+      returned data with my analysis.
+
+  - title: "The grayness of the origin of life"
+    authors: "HH Smith, AS Hyde, DN Simkus, E Libby, SE Maurer, HV Graham, ..., CI Pozarycki, CH House, SS Johnson"
+    venue: "Life 11 (6), 498"
+    year: 2021
+    url: "https://doi.org/10.3390/life11060498"
+    tags: [Life detection]
+    selected: true
+    blurb: >-
+      Argues that the line between nonliving chemistry and life is not sharp, and that the origin of life
+      is better described as a gradual, gray transition. That has direct consequences for how we search for
+      life elsewhere.
+
+  - title: "Abundant extraterrestrial amino acids in the primitive CM carbonaceous chondrite Asuka 12236"
+    authors: "DP Glavin, HL McLain, JP Dworkin, ET Parker, JE Elsila, JC Aponte, ..., CI Pozarycki, ..."
+    venue: "Meteoritics & Planetary Science 55 (9), 1979-2006"
+    year: 2020
+    url: "https://doi.org/10.1111/maps.13560"
+    tags: [Meteorites]
+    selected: true
+    blurb: >-
+      Asuka 12236 is one of the least altered carbonaceous meteorites known, and it carries abundant amino
+      acids made without life. This is the abiotic chemistry any claim of alien life has to be distinguished from.
+
+preprints:
+  - title: "Anaerobic methane oxidation by ANME-2a at two molar chloride in Orca Basin"
+    authors: "LA Adepoju, ER Paris, JM McKaig, RSR Salcedo, A Martinez, ..."
+    venue: "bioRxiv"
+    year: 2026
+    url: "https://doi.org/10.1101/2026.02.09.704686"
+    tags: [Brines]
+
+  - title: "The vacant niche revisited: Using negative results to refine the limits of habitability"
+    authors: "LE Ratliff, AH Fulford, CI Pozarycki, G Wimp, F Nichols, MR Osburn, ..."
+    venue: "bioRxiv"
+    year: 2023
+    url: "https://doi.org/10.1101/2023.11.06.565904"
+    tags: [Life detection]
+    blurb: >-
+      A meta-analysis of studies that looked for life and did not find it, used to map where the limits of
+      habitability on Earth really are.
+
+other:
+  - title: "Molecular Biosignature Detection in Hypersaline Planetary Analogs"
+    authors: "CI Pozarycki"
+    venue: "PhD dissertation, Georgia Institute of Technology"
+    year: 2025
+    url: "/thesis/"
+    tags: [Thesis]
+  - title: "Planetary Exploration 3.0: A Roadmap for Software-Defined, Radically Adaptive Space Systems"
+    authors: "M Ono, D Selva, M Cable, SJ Chung, M Choukroun, A Freeman, ..."
+    venue: "ASCEND 2026"
+    year: 2026
+    tags: [Space systems]
+  - title: "The Fermi Paradox and Astrobiology"
+    authors: "AM Stockton, A Simpson, M Cable, C Phillips-Lander, C Bennett, CG Raj, ..."
+    venue: "Interstellar Travel (book chapter), 209-266"
+    year: 2023
+    tags: [Life detection]
+
+# Selected conference talks and abstracts (first author)
+abstracts:
+  - { title: "Designing One-Shot Outer Solar System Exploration for Astrobiology", venue: "Astrobiology Science Conference (AbSciCon)", year: 2026 }
+  - { title: "Organic Biosignature Entrainment in the Evaporitic Crusts, Clays, and Brines of Western Australia Transient Lakes", venue: "Tenth International Conference on Mars (oral)", year: 2024 }
+  - { title: "Biosignature Organics in Hypersaline Analogs: Obstacles and Insights for in situ and Returned Sample Analyses", venue: "AbSciCon", year: 2024 }
+  - { title: "Thermochemolysis by TMAH Releases Organic Biosignature Compounds in the Mars Analog Gypsum Crusts of Western Australia", venue: "AGU Fall Meeting", year: 2023 }
+  - { title: "\"Follow the Salt\": Biosignature Preservation and Evapoconcentration in Hypersaline Environments", venue: "Astrobiology Graduate Conference (talk)", year: 2023 }
+  - { title: "\"Follow the Salt\": Patterns of Biosignature Preservation and Evapoconcentration in Hypersaline Magnesium Brines", venue: "54th Lunar and Planetary Science Conference (oral)", year: 2023 }
+  - { title: "\"Follow the Salt\": Detecting Concentrated, Preserved Biosignature Molecules in Complex Evaporitic Brines", venue: "Brines Across the Solar System", year: 2023 }
+  - { title: "SWAM: A Submersible Water Activity Meter for Use in Hypersaline Bodies", venue: "AbSciCon", year: 2022 }
+
+scholar_url: "https://scholar.google.com/citations?user=kVl64nwAAAAJ&hl=en"
