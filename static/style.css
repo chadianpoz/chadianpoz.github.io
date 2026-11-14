@@ -243,3 +243,9 @@ main.reading { max-width: 700px; }
 a.project-link { text-decoration: none; color: inherit; transition: border-color .15s; }
 a.project-link:hover { border-color: var(--accent); }
 a.project-link:hover h3 { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+main.wide { max-width: 1100px; }
+.photo-grid { columns: 3 300px; column-gap: 14px; margin-top: 24px; }
+.photo { break-inside: avoid; margin: 0 0 14px; }
+.photo img { width: 100%; height: auto; display: block; border-radius: 2px; }
+.photo figcaption { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 5px; }

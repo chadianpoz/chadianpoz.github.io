@@ -1,0 +1,21 @@
+# Photography page. "file" is the name in static/photos/ (without .jpg); a "-sm" version is used for the grid.
+# Edit captions freely.
+- { file: POZ_6763, caption: "Namibia" }
+- { file: POZ_6673, caption: "Namibia" }
+- { file: POZ_6420, caption: "Namibia" }
+- { file: POZ_7071, caption: "Namibia" }
+- { file: POZ_7099, caption: "Namibia" }
+- { file: POZ_7112, caption: "Namibia" }
+- { file: POZ_5672, caption: "Namibia" }
+- { file: POZ_5521, caption: "Etosha, Namibia" }
+- { file: 11x16-Greenland-Edited-06, caption: "Greenland" }
+- { file: 11x17-Greenland-Edited-12, caption: "Greenland" }
+- { file: 8x10-Greenland-Edited-32, caption: "Arctic fox, Greenland" }
+- { file: DSC_0751, caption: "Gorilla" }
+- { file: DSC_0762, caption: "Gorilla" }
+- { file: eclipse-w-background-unblended, caption: "Annular solar eclipse, October 2023" }
+- { file: WF-For-Yingst-1, caption: "U.S. Air Force Thunderbirds" }
+- { file: WF-For-Yingst, caption: "U.S. Air Force Thunderbirds" }
+- { file: WF-For-Yingst-3, caption: "F-35A" }
+- { file: WF-For-Yingst-5, caption: "F-35A" }
+- { file: ChadPozary006137-R1-019, caption: "Film" }

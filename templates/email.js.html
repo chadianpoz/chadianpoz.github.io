@@ -1,0 +1,12 @@
+<script>
+document.querySelectorAll('.email-reveal').forEach(function (a) {
+  a.addEventListener('click', function (ev) {
+    if (a.dataset.shown) return;
+    ev.preventDefault();
+    var addr = atob(a.dataset.e).split('').reverse().join('');
+    a.textContent = addr;
+    a.href = 'mail' + 'to:' + addr;
+    a.dataset.shown = '1';
+  });
+});
+</script>

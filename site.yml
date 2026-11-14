@@ -11,6 +11,7 @@ nav:
   - { title: projects, url: /projects/ }
   - { title: writing, url: /writing/ }
   - { title: thesis, url: /thesis/ }
+  - { title: photography, url: /photography/ }
   - { title: cv, url: /cv/ }
 
 links:

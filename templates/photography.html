@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Photography · {{ site.name }}{% endblock %}
+{% block mainclass %}wide{% endblock %}
+{% block content %}
+<h1 class="page-title">Photography</h1>
+<p class="page-intro">Prints are for sale. <a href="#" class="email-reveal" data-e="bW9jLmxpYW1nQHpvcC5uYWkuZGFoYw==">Email me</a> to ask about sizes and pricing.</p>
+<div class="photo-grid">
+{% for p in photos %}
+  <figure class="photo">
+    <a href="/photos/{{ p.file }}.jpg"><img src="/photos/{{ p.file }}-sm.jpg" alt="{{ p.caption }}" loading="lazy"></a>
+    {% if p.caption %}<figcaption>{{ p.caption }}</figcaption>{% endif %}
+  </figure>
+{% endfor %}
+</div>
+{% include "email.js.html" %}
+{% endblock %}

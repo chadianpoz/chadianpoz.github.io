@@ -169,6 +169,7 @@ def build():
     write("/", "home.html", posts=posts[:5], selected=selected, projects=[p for p in projects if p.get("featured")])
     write("/publications/", "publications.html", pubs=pubs)
     write("/projects/", "projects.html", projects=projects)
+    write("/photography/", "photography.html", photos=load_yaml("data/photos.yml"))
     write("/writing/", "writing.html", posts=posts)
     local = [p for p in posts if not p.get("external")]
     for i, post in enumerate(local):
