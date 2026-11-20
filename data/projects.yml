@@ -25,6 +25,7 @@
     tried before, and proposes the next run. It tunes seven voltage and timing settings per campaign, scores each
     output with an autonomous grader (signal-to-noise, resolution, and more), and cites the evidence behind each
     choice. It replaced factorial design of experiments for our method development.
+  url: https://deleon.bio/article?slug=juniper
 - title: Daily human biochemistry cohort
   group: Deleon
   years: 2025 to now

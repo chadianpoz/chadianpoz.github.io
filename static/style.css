@@ -249,3 +249,5 @@ main.wide { max-width: 1100px; }
 .photo { break-inside: avoid; margin: 0 0 14px; }
 .photo img { width: 100%; height: auto; display: block; border-radius: 2px; }
 .photo figcaption { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 5px; }
+
+.prose video { width: 100%; height: auto; display: block; margin: 24px 0; border-radius: 4px; background: #fff; }
